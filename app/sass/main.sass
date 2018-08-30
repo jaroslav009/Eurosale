@@ -1,0 +1,661 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+.header 
+	display: flex
+	flex-direction: column
+	justify-content: center
+
+//hidden small menu
+.logo_sm_mnu, .text_sm_mnu, .search, .s_small_content_head, .burger_mnu, .menu, .contact_mnu_sm, .mnu_list_block .dropdown_menu, .mnu_list_block .search_top_mnu
+	display: none
+.mnu_list
+	display: none
+.mnu
+	border-bottom: 1px solid #e0e1e0
+.top_mnu 
+	font-family: "OpenSans-Regular"
+	width: 100%
+	background-color: #f7f7f7
+	min-height: 40px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	font-family: open-sans-regular
+	.dropdown_menu
+		select 
+			border-left: 1px solid #dfdede
+			border-right: 1px solid #dfdede
+			border-top: 1px solid #f7f7f7
+			border-bottom: 1px solid #f7f7f7
+			color: $accent
+			background-color: #f7f7f7
+			padding-left: 7px
+
+	
+.search_top_mnu
+	display: flex
+	button
+		color: #ed1b23
+		border: none
+		border-left: 1px solid #dfdede
+		background-color: #f7f7f7
+		cursor: pointer
+	input[type="text"]
+		border: none
+		background-color: #f7f7f7
+.dropdown_menu
+	select
+		border: none
+		font-family: "OpenSans-Semibold"
+		background-color: #f7f7f7
+		// -webkit-appearance: none
+		// -moz-appearance: none
+		// appearance: none
+		i 
+			font-family: "FontAwesomeSolid"
+
+.logo_head
+	margin-top: 30px
+	color: $text
+	font-family: "OpenSans-Regular"
+.logo
+	display: flex
+	img
+		margin-right: 20px
+	.logo_content
+		border-left: 1px solid #6e706d
+		font-size: 16px
+		padding-left: 18px
+.contact_mnu
+	font-size: 24px
+	span
+		font-family: "OpenSans-Semibold"
+	p 
+		font-size: 18px
+		text-decoration: underline
+.mnu_list
+	margin-top: 40px
+	display: flex
+	justify-content: flex-end
+	li
+		display: inline-block
+		a 
+			font-family: "OpenSans-Semibold"
+			margin-left: 20px
+			color: $text
+			text-decoration: none
+			&:hover
+				border-bottom: 2px solid $accent
+				transition: all .2s
+		select 
+			color: $text
+			margin-left: 20px
+			font-family: "OpenSans-Semibold"
+.content_header
+	background-image: url("../img/fon_1366.png")
+	background-size: cover
+	background-position: center center
+	min-height: 600px
+	span 
+		font-size: 60px
+		font-family: "OpenSans-Regular"
+		color: $text
+		line-height: 1
+	p 
+		color: #6e706d
+		font-size: 24px
+		margin-top: 20px
+	button
+		background-color: $accent
+		color: #ffffff
+		border: none
+		border-radius: 5em
+		cursor: pointer
+		width: 200px
+		height: 35px
+		&:hover
+			background-color: #ED1B0A
+			transition: .4s ease
+.text_header
+	margin-top: 50px
+.contact_mnu_sm 
+	display: none
+//Begin burger
+.menu
+  text-align: right
+
+.menu
+  text-align: right
+#menu 
+	z-index: 2
+.menu__icon
+  display: none
+  width: 45px
+  height: 35px
+  position: relative
+  cursor: pointer
+  span
+    display: block
+    position: absolute
+    height: 3px
+    width: 80%
+    background: #333333
+    border-radius: 9px
+    opacity: 1
+    left: 0
+    transform: rotate(0deg)
+    transition: .25s ease-in-out
+    &:nth-child(1)
+      top: 0px
+    &:nth-child(2), &:nth-child(3)
+      top: 8px
+    &:nth-child(4)
+      top: 16px
+
+.menu__links-item
+  display: inline-block
+  color: #333333
+  font-family: Arial
+  font-size: 14px
+  line-height: 30px
+  padding: 0 10px
+  text-transform: uppercase
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+.menu.menu_state_open
+  .menu__icon span
+    &:nth-child(1)
+      top: 18px
+      width: 0%
+      left: 50%
+    &:nth-child(2)
+      transform: rotate(45deg)
+    &:nth-child(3)
+      transform: rotate(-45deg)
+    &:nth-child(4)
+      top: 18px
+      width: 0%
+      left: 50%
+  .menu__links
+    display: block
+
+.menu
+	span
+		margin-top: 20px
+
+@media screen and (max-width: 999px)
+  .menu__icon
+    display: inline-block
+  .menu__links
+    position: fixed
+    display: none
+    top: 0
+    right: 0
+    left: 0
+    margin-top: 52px
+    background-color: rgba(0, 0, 0, 0.8)
+    z-index: 1000
+    overflow: auto
+  .menu__links-item
+    display: block
+    padding: 10px 0
+    text-align: center
+    color: #ffffff
+
+//End Burger
+
+.infrografia
+	background-color: #3c3c3c
+	color: #818181
+	opacity: 0.9
+	padding: 10px 0px
+	display: flex
+	justify-content: center
+	margin-top: 50px
+	.owl-nav, .owl-dots
+		display: none
+	.it-1
+		margin-left: 8px
+	.item
+		display: flex
+		flex-direction: row
+		margin-right: 50px
+		justify-content: center
+		i
+			align-self: center
+			margin-right: 27px
+			font-size: 28px
+			color: #9e9e9e
+		p 
+			font-size: 16px
+			font-family: "OpenSans-Light"
+
+.s_task
+	margin-top: 50px
+	h1
+		margin-bottom: 50px
+		text-align: center
+		font-size: 40px
+		font-family: "OpenSans-Bold"
+.item_task
+	display: flex
+	flex-direction: column
+	font-family: "OpenSans-Regular"
+	img 
+		margin-bottom: 20px
+	h3
+		font-family: "OpenSans-Semibold"
+		border-left: 3px solid $accent
+		font-size: 24px
+		padding-left: 11px
+	p 
+		color: #6e706d
+		font-size: 18px
+		margin-top: 10px
+		margin-bottom: 50px
+.s_cooperation
+	h1 
+		text-align: center
+		font-size: 40px
+		margin-bottom: 50px
+		font-family: "OpenSans-Bold"
+	.line 
+		width: 380px
+		text-align: center
+		border-bottom: 4px solid $accent
+		margin: 50px auto
+	.sub_item
+		display: flex
+		margin-top: 50px
+		img 
+			align-self: flex-start
+			margin-right: 20px
+		h3
+			font-size: 24px
+			font-family: "OpenSans-Regular"
+			text-transform: uppercase
+	.item
+		display: flex
+		flex-direction: column
+		height: 100%
+		.cont_item 
+			color: #40403e
+			font-size: 18px
+			font-family: "OpenSans-Regular"
+	.triangle
+		display: flex
+		flex-direction: column
+		align-self: flex-end
+		justify-content: flex-end
+		width: 100%
+		i 
+			position: absolute
+			display: flex
+			bottom: 0px
+			align-self: center
+			color: $accent
+		.line_triangle
+			width: 100%
+			border: 2px solid #6e706d
+			margin: 0px auto
+		.d3
+			width: 0
+			height: 0
+			border-left: 8px solid transparent
+			border-right: 8px solid transparent
+			border-bottom: 10px solid #6e706d
+			margin: 0 auto
+.s_service
+	margin-top: 100px
+	background-image: url(../img/fons_service.png)
+	padding: 50px 0
+	background-size: cover
+	background-position: center
+	h2 
+		font-family: "OpenSans-Semibold"
+		font-size: 40px
+		text-align: center
+		color: #ffffff
+
+.s_service
+	.col-lg-2
+		border-left: 1px solid #5ca8fd
+		&:last-child
+			border-right: 1px solid #5ca8fd
+	p
+		font-size: 14px
+		font-family: "OpenSans-Semibold"
+		padding-left: 14px
+		text-align: center
+		margin-top: 1.625em
+		a 
+			font-size: 14px
+			align-self: center
+			i
+				opacity: 0
+				position: absolute
+				left: 50%
+				color: #fff
+				margin-top: 30px
+			color: #93c6ff
+			text-decoration: none
+			&:nth-child(n)
+				&:hover
+					transition: .4s ease all
+					color: #fff
+					i 
+						opacity: 1
+						transition: .4s ease opacity
+.content_service
+	text-align: center
+	background-color: #0665cf
+	color: #ffffff
+	padding: 50px 0
+	font-family: "OpenSans-Semibold"
+	font-size: 20px
+	a 
+		color: #93c6ff
+		text-align: center
+		text-decoration: underline
+		font-size: 18px
+		font-family: "OpenSans-Regular"
+		&:hover
+			transition: .4s ease color
+			color: #fff
+
+.s_company
+	h2
+		font-size: 40px
+		font-family: "OpenSans-Semibold"
+		text-align: center
+		color: #3f3f40
+		margin-top: 80px
+	p 
+		font-size: 24px
+		font-family: "OpenSans-Regular"
+		text-align: center
+		color: #777976
+	.owl-carousel
+		display: flex
+		justify-content: center
+
+
+
+.logo_companys
+	border-top: 1px solid #ebebec
+	border-bottom: 1px solid #ebebec
+	padding: 15px
+.btn_company
+	.active_button
+		background-color: $accent
+		color: #fff
+		border: 1px solid $accent
+.item_company
+	height: 60px
+.btn_company
+	// display: flex
+	// align-items: center
+	// flex-direction: column
+	text-align: center
+	button 
+		margin-top: 20px
+		border-radius: 5em
+		background-color: #fff
+		border: 1px solid #6e706d
+		color: #6e706d
+		padding: 10px 5px
+		margin-right: 15px
+		cursor: pointer
+		&:hover
+			transition: .4s ease all
+			background-color: $accent
+			color: #fff
+			border: 1px solid $accent
+
+.send_company
+	display: flex
+	text-align: center
+	justify-content: center
+	margin-top: 50px
+	p 
+		font-size: 18px
+		align-self: center
+		font-family: "OpenSans-Bold"
+	a 
+		font-family: "OpenSans-Regular"
+		margin-left: 30px
+		font-size: 18px
+		color: #3f3f40
+		text-decoration: underline
+		&:hover
+			color: $accent
+
+.s_order
+	background-color: #f9f9f9
+	margin-top: 60px
+	padding: 70px 0
+	display: flex
+	flex-direction: row
+	justify-content: center
+	h2 
+		font-family: "OpenSans-Bold"
+		font-size: 40px
+		text-align: center
+		color: #3f3f40
+	p 
+		font-size: 24px
+		color: #6e706d
+		text-align: center
+		font-family: "OpenSans-Regular"
+		margin-bottom: 79px
+.line_order
+	display: flex
+	border: 2px solid #57585a
+	height: 20px
+	width: 20px
+	padding: 20px
+	justify-content: center
+	align-items: center
+	border-radius: 10em
+	margin-right: 10px
+.red_line 
+	border-left: 2px solid $accent
+	height: 23px
+	border-radius: 1px
+	&:nth-child(2)
+		margin-left: 2px
+		margin-right: 2px
+.red_line_four_1
+	border-left: 2px solid $accent
+	height: 23px
+	border-radius: 1px
+	transform: rotate(-5deg)
+	position: absolute
+.red_line_four_2
+	border-left: 2px solid $accent
+	height: 23px
+	border-radius: 1px
+	transform: rotate(5deg)
+	position: absolute
+.cont_order
+	display: flex
+	img
+		width: 40px
+		height: 40px
+	p 
+		font-family: "OpenSans-Bold"
+		font-size: 14px
+		text-align: left
+		margin-left: 10px
+.step
+	display: flex
+	justify-content: center
+.slick-next
+	right: 0
+	display: none
+
+.sm_btn
+	display: none
+.sm_text_order
+	display: none
+.btn_order
+	display: flex
+	justify-content: center
+	width: 100%
+	button
+		border: none
+		border-radius: 5em
+		background-color: #ed1b23
+		color: #fff
+		padding: 10px 30px
+		text-transform: uppercase
+		font-family: "OpenSans-Regular"
+		font-size: 18px
+		text-align: center
+.s_expierence
+	background-image: url(../img/expierence_fons.png)
+	background-position: center
+	background-size: cover
+	padding: 80px 0
+	h2 
+		text-align: center
+		font-size: 40px
+		color: #fff
+		font-family: "OpenSans-Bold"
+		margin-bottom: 53px
+	p 
+		font-size: 24px
+		font-family: "OpenSans-Regular"
+		color: #fff
+.container_expiernce
+	display: flex
+	flex-direction: row
+.block_expiernce
+	display: flex
+	flex-direction: column
+.item_expiernce
+	padding: 10px
+	display: flex
+	// justify-content: center
+	// flex-direction: column
+	background-color: rgba(212, 3, 5, 0.8)
+	min-height: 124px
+.item_expiernce_flex
+	padding: 10px
+	display: flex
+	justify-content: center
+	flex-direction: column
+	background-color: #d40305
+.text__item_expiernce
+	p 
+		font-size: 20px
+		font-family: "OpenSans-Semibold"
+		&:before
+			content: ''
+			border-left: 3px solid #ed1b23
+			margin-right: 10px
+.h_100 
+	height: 100%
+.text__flex
+	display: flex
+	flex-direction: row
+	justify-content: center
+	p 
+		font-size: 20px
+		font-family: "OpenSans-Semibold"
+		&:before
+			content: ''
+			border-left: 3px solid #ed1b23
+			margin-right: 10px
+.s_contact
+	background-image: url(../img/contact.png)
+	background-position: right
+	background-repeat: no-repeat
+	min-height: 300px
+.title_contact
+	margin-top: 25px
+	font-size: 40px
+	color: #3f3f40
+	font-family: "OpenSans-Bold", serif
+.cont_title
+	margin-top: 72px
+	color: #6e706d
+	font-size: 24px
+	font-family: "OpenSans-Bold", serif
+.sub_cont
+	color: #ed1b23
+	font-size: 18px
+	font-family: "OpenSans-Bold", serif
+.phone_block
+	margin-top: 35px
+	margin-bottom: 26px
+	display: flex
+	flex-direction: row
+.number_phone
+	&:last-child
+		margin-left: 20px
+	button
+		background-color: #ed1b23
+		color: #ffffff
+		border: 1px solid #fe2702
+		padding: 5px 5px
+		border-radius: 5em
+		font-size: 30px
+		font-family: "OpenSans-Bold", serif
+.red_expiernce
+	background-color: #d40305
+//Footer
+// Flex style
+.footer
+	background-color: #3f3f40
+	padding: 72px 0
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center
+	font-size: 14px
+.logo_footer
+	margin-right: 64px
+.block_contact__footer
+	margin-right: 64px
+	color: #ffffff
+	font-size: 18px
+.title_contact__footer
+	font-family: "OpenSans-Bold", serif
+	margin-bottom: 10px
+.contact_footer
+	font-family: "OpenSans-Regular", serif
+	padding: 0
+	margin-top: 20px
+	li 
+		list-style: none
+		font-size: 14px
+.menu_footer	
+	margin-right: 64px
+.list_menu__footer
+	padding: 0
+.list_menu__footer
+	li 
+		list-style: none
+		a 
+			color: #ffffff
+			font-family: "OpenSans-Regular", serif
+.bottom_footer
+	background-color: #323233
+	text-align: center
+	padding: 20px 0
+	color: #afb0af
+	font-size: 14px
+
+// Style for popuo
+#dialog
+	display: none
+.title_dialog
+	font-family: "OpenSans-SemiBold", serif
+	font-size: 14px
+@import "media" 
+
